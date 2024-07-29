@@ -4,18 +4,14 @@
   "info": {
     "singularName": "person",
     "pluralName": "people",
-    "displayName": "People"
+    "displayName": "People",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "component",
-      "repeatable": true,
-      "component": "parts.person"
-    },
     "category": {
       "type": "enumeration",
       "enum": [
@@ -29,14 +25,34 @@
       "required": true
     },
     "picture": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bio": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "office": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
     }
   }
 }

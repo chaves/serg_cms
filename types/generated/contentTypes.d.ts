@@ -368,12 +368,12 @@ export interface ApiPersonPerson extends Schema.CollectionType {
     singularName: 'person';
     pluralName: 'people';
     displayName: 'People';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.Component<'parts.person', true>;
     category: Attribute.Enumeration<
       [
         'Director',
@@ -385,7 +385,19 @@ export interface ApiPersonPerson extends Schema.CollectionType {
       ]
     > &
       Attribute.Required;
-    picture: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    picture: Attribute.Media<'images'>;
+    bio: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    first_name: Attribute.String & Attribute.Required;
+    last_name: Attribute.String & Attribute.Required;
+    office: Attribute.String;
+    email: Attribute.Email;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
