@@ -788,6 +788,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDoctoralPrizeDoctoralPrize extends Schema.SingleType {
+  collectionName: 'doctoral_prizes';
+  info: {
+    singularName: 'doctoral-prize';
+    pluralName: 'doctoral-prizes';
+    displayName: 'Doctoral prizes ';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    decription: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::doctoral-prize.doctoral-prize',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::doctoral-prize.doctoral-prize',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -816,6 +854,9 @@ export interface ApiEventEvent extends Schema.CollectionType {
           preset: 'standard';
         }
       >;
+    date_start: Attribute.Date;
+    date_end: Attribute.Date;
+    archive: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -877,6 +918,7 @@ export interface ApiNewNew extends Schema.CollectionType {
     singularName: 'new';
     pluralName: 'news';
     displayName: 'News ';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -893,6 +935,7 @@ export interface ApiNewNew extends Schema.CollectionType {
       >;
     picture: Attribute.Media<'images'>;
     attached_files: Attribute.Media<'files', true>;
+    archive: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -975,6 +1018,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::doctoral-prize.doctoral-prize': ApiDoctoralPrizeDoctoralPrize;
       'api::event.event': ApiEventEvent;
       'api::home-description.home-description': ApiHomeDescriptionHomeDescription;
       'api::new.new': ApiNewNew;

@@ -30,6 +30,16 @@
         "preset": "standard"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "archive": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

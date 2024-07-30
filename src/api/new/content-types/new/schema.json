@@ -4,7 +4,8 @@
   "info": {
     "singularName": "new",
     "pluralName": "news",
-    "displayName": "News "
+    "displayName": "News ",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,18 +25,24 @@
       "customField": "plugin::ckeditor.CKEditor"
     },
     "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "attached_files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "archive": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
