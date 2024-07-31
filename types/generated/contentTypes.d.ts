@@ -1000,6 +1000,39 @@ export interface ApiPersonPerson extends Schema.CollectionType {
   };
 }
 
+export interface ApiPrizePrize extends Schema.CollectionType {
+  collectionName: 'prizes';
+  info: {
+    singularName: 'prize';
+    pluralName: 'prizes';
+    displayName: 'prizes';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    first_name: Attribute.String & Attribute.Required;
+    last_name: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    year: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::prize.prize',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::prize.prize',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1023,6 +1056,7 @@ declare module '@strapi/types' {
       'api::home-description.home-description': ApiHomeDescriptionHomeDescription;
       'api::new.new': ApiNewNew;
       'api::person.person': ApiPersonPerson;
+      'api::prize.prize': ApiPrizePrize;
     }
   }
 }
