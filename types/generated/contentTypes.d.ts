@@ -788,6 +788,29 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAreaArea extends Schema.CollectionType {
+  collectionName: 'areas';
+  info: {
+    singularName: 'area';
+    pluralName: 'areas';
+    displayName: 'areas';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.Enumeration<['Climate', 'Energy', 'Mobility']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::area.area', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::area.area', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDoctoralPrizeDoctoralPrize extends Schema.SingleType {
   collectionName: 'doctoral_prizes';
   info: {
@@ -857,6 +880,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     date_start: Attribute.Date;
     date_end: Attribute.Date;
     archive: Attribute.Boolean & Attribute.DefaultTo<false>;
+    areas: Attribute.Relation<
+      'api::event.event',
+      'oneToMany',
+      'api::area.area'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -936,6 +964,7 @@ export interface ApiNewNew extends Schema.CollectionType {
     picture: Attribute.Media<'images'>;
     attached_files: Attribute.Media<'files', true>;
     archive: Attribute.Boolean & Attribute.DefaultTo<false>;
+    areas: Attribute.Relation<'api::new.new', 'oneToMany', 'api::area.area'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -982,6 +1011,11 @@ export interface ApiPersonPerson extends Schema.CollectionType {
     last_name: Attribute.String & Attribute.Required;
     office: Attribute.String;
     email: Attribute.Email;
+    areas: Attribute.Relation<
+      'api::person.person',
+      'oneToMany',
+      'api::area.area'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1051,6 +1085,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::area.area': ApiAreaArea;
       'api::doctoral-prize.doctoral-prize': ApiDoctoralPrizeDoctoralPrize;
       'api::event.event': ApiEventEvent;
       'api::home-description.home-description': ApiHomeDescriptionHomeDescription;

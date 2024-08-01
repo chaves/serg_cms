@@ -43,6 +43,11 @@
     "archive": {
       "type": "boolean",
       "default": false
+    },
+    "areas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::area.area"
     }
   }
 }
