@@ -64,6 +64,13 @@
       "targetField": "last_name",
       "required": true,
       "maxLength": 50
+    },
+    "cv": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

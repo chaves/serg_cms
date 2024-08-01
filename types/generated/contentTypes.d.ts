@@ -861,7 +861,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     description: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
@@ -878,11 +878,12 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'api::area.area'
     >;
-    slug: Attribute.UID<'api::event.event', 'Title'> &
+    slug: Attribute.UID &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 50;
       }>;
+    attached_files: Attribute.Media<'files', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1024,6 +1025,7 @@ export interface ApiPersonPerson extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 50;
       }>;
+    cv: Attribute.Media<'files'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1075,6 +1077,57 @@ export interface ApiPrizePrize extends Schema.CollectionType {
   };
 }
 
+export interface ApiWorkingPaperWorkingPaper extends Schema.CollectionType {
+  collectionName: 'working_papers';
+  info: {
+    singularName: 'working-paper';
+    pluralName: 'working-papers';
+    displayName: 'WorkingPapers';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    abstract: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    year: Attribute.Integer;
+    areas: Attribute.Relation<
+      'api::working-paper.working-paper',
+      'oneToMany',
+      'api::area.area'
+    >;
+    authors: Attribute.String;
+    files: Attribute.Media<'files', true>;
+    slug: Attribute.UID<'api::working-paper.working-paper', 'title'> &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::working-paper.working-paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::working-paper.working-paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1100,6 +1153,7 @@ declare module '@strapi/types' {
       'api::new.new': ApiNewNew;
       'api::person.person': ApiPersonPerson;
       'api::prize.prize': ApiPrizePrize;
+      'api::working-paper.working-paper': ApiWorkingPaperWorkingPaper;
     }
   }
 }
