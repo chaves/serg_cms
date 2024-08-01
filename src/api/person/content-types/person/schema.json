@@ -58,6 +58,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::area.area"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "last_name",
+      "required": true,
+      "maxLength": 50
     }
   }
 }

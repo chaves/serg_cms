@@ -48,6 +48,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::area.area"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "maxLength": 50,
+      "required": true
     }
   }
 }

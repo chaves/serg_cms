@@ -862,13 +862,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String & Attribute.Required;
-    slug: Attribute.String &
-      Attribute.CustomField<
-        'plugin::slug.slug',
-        {
-          pattern: 'title';
-        }
-      >;
     description: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
@@ -885,6 +878,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'api::area.area'
     >;
+    slug: Attribute.UID<'api::event.event', 'Title'> &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -965,6 +963,11 @@ export interface ApiNewNew extends Schema.CollectionType {
     attached_files: Attribute.Media<'files', true>;
     archive: Attribute.Boolean & Attribute.DefaultTo<false>;
     areas: Attribute.Relation<'api::new.new', 'oneToMany', 'api::area.area'>;
+    slug: Attribute.UID<'api::new.new', 'title'> &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1016,6 +1019,11 @@ export interface ApiPersonPerson extends Schema.CollectionType {
       'oneToMany',
       'api::area.area'
     >;
+    slug: Attribute.UID<'api::person.person', 'last_name'> &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

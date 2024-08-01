@@ -16,13 +16,6 @@
       "type": "string",
       "required": true
     },
-    "slug": {
-      "type": "customField",
-      "options": {
-        "pattern": "title"
-      },
-      "customField": "plugin::slug.slug"
-    },
     "description": {
       "type": "customField",
       "options": {
@@ -45,6 +38,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::area.area"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "maxLength": 50,
+      "required": true
     }
   }
 }
