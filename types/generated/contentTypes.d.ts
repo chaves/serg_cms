@@ -1050,6 +1050,7 @@ export interface ApiPrizePrize extends Schema.CollectionType {
     singularName: 'prize';
     pluralName: 'prizes';
     displayName: 'prizes';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1058,7 +1059,12 @@ export interface ApiPrizePrize extends Schema.CollectionType {
     first_name: Attribute.String & Attribute.Required;
     last_name: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
-    year: Attribute.Integer;
+    year: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 4;
+        maxLength: 4;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
