@@ -878,7 +878,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'api::area.area'
     >;
-    slug: Attribute.UID &
+    slug: Attribute.UID<'api::event.event', 'title'> &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 50;

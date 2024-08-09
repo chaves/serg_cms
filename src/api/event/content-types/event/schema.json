@@ -42,14 +42,16 @@
     "slug": {
       "type": "uid",
       "maxLength": 50,
-      "required": true
+      "required": true,
+      "targetField": "title"
     },
     "attached_files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
