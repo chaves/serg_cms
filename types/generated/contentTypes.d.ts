@@ -811,44 +811,6 @@ export interface ApiAreaArea extends Schema.CollectionType {
   };
 }
 
-export interface ApiDoctoralPrizeDoctoralPrize extends Schema.SingleType {
-  collectionName: 'doctoral_prizes';
-  info: {
-    singularName: 'doctoral-prize';
-    pluralName: 'doctoral-prizes';
-    displayName: 'Doctoral prizes ';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    decription: Attribute.RichText &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::doctoral-prize.doctoral-prize',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::doctoral-prize.doctoral-prize',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -1153,7 +1115,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::area.area': ApiAreaArea;
-      'api::doctoral-prize.doctoral-prize': ApiDoctoralPrizeDoctoralPrize;
       'api::event.event': ApiEventEvent;
       'api::home-description.home-description': ApiHomeDescriptionHomeDescription;
       'api::new.new': ApiNewNew;
