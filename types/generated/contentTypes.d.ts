@@ -959,6 +959,7 @@ export interface ApiPersonPerson extends Schema.CollectionType {
         'Research Team',
         'Associate Researchers',
         'PhD Students',
+        'Postdoctoral researchers',
         'Visiting Academics',
         'Previous PhD Students'
       ]
