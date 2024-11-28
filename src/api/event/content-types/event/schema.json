@@ -52,6 +52,13 @@
       "allowedTypes": [
         "files"
       ]
+    },
+    "picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
