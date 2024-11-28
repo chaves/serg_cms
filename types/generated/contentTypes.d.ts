@@ -509,14 +509,6 @@ export interface ApiHomeDescriptionHomeDescription
       'api::home-description.home-description'
     > &
       Schema.Attribute.Private;
-    presentation: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

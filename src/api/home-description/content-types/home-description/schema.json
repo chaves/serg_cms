@@ -12,15 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "presentation": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "required": false,
-      "customField": "plugin::ckeditor.CKEditor"
-    },
     "axis_innovation": {
       "type": "customField",
       "options": {
