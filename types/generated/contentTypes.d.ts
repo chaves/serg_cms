@@ -443,6 +443,7 @@ export interface ApiHomeDescriptionHomeDescription
   extends Struct.SingleTypeSchema {
   collectionName: 'home_descriptions';
   info: {
+    description: '';
     displayName: 'Home description';
     pluralName: 'home-descriptions';
     singularName: 'home-description';
@@ -451,9 +452,57 @@ export interface ApiHomeDescriptionHomeDescription
     draftAndPublish: true;
   };
   attributes: {
+    axis_climate: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    axis_energy: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    axis_innovation: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    axis_mobility: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    conclusion: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    introduction: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

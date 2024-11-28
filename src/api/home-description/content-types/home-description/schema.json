@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-description",
     "pluralName": "home-descriptions",
-    "displayName": "Home description"
+    "displayName": "Home description",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,54 @@
         "preset": "standard"
       },
       "required": false,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "axis_innovation": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "axis_mobility": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "axis_energy": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "introduction": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "axis_climate": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "conclusion": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
       "customField": "plugin::ckeditor.CKEditor"
     }
   }
