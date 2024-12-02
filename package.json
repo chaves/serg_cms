@@ -13,14 +13,14 @@
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^1.0.2",
     "@strapi/plugin-cloud": "5.4.1",
-    "@strapi/plugin-users-permissions": "5.4.1",
-    "@strapi/strapi": "5.4.1",
-    "mysql2": "3.9.8",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "@strapi/plugin-users-permissions": "5.4.2",
+    "@strapi/strapi": "5.4.2",
+    "mysql2": "3.11.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.0.0",
     "strapi-plugin-tagsinput": "^2.0.2",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.1.13"
   },
   "author": {
     "name": "Bruno Chaves"
