@@ -688,6 +688,7 @@ export interface ApiWorkingPaperWorkingPaper
       'api::working-paper.working-paper'
     > &
       Schema.Attribute.Private;
+    picture: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.SetMinMaxLength<{

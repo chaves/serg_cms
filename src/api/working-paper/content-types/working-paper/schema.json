@@ -47,6 +47,13 @@
       "type": "uid",
       "targetField": "title",
       "maxLength": 50
+    },
+    "picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
