@@ -419,6 +419,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -457,6 +458,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -465,6 +467,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -473,6 +476,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -481,6 +485,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -489,6 +494,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -500,6 +506,7 @@ export interface ApiHomeDescriptionHomeDescription
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -539,6 +546,7 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'standard';
         }
@@ -577,6 +585,7 @@ export interface ApiPersonPerson extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'rich';
         }
@@ -672,6 +681,7 @@ export interface ApiWorkingPaperWorkingPaper
       Schema.Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
           output: 'HTML';
           preset: 'light';
         }
