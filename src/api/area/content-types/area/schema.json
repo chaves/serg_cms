@@ -15,7 +15,7 @@
     "title": {
       "type": "enumeration",
       "enum": [
-        "Climate",
+        "Climate Change Strategy",
         "Energy",
         "Mobility"
       ]
