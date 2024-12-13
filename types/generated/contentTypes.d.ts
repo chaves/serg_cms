@@ -388,9 +388,7 @@ export interface ApiAreaArea extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::area.area'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Enumeration<
-      ['Climate Change Strategy', 'Energy', 'Mobility']
-    >;
+    title: Schema.Attribute.Enumeration<['Climate', 'Energy', 'Mobility']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
