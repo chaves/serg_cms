@@ -654,6 +654,7 @@ export interface ApiPrizePrize extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::prize.prize'> &
       Schema.Attribute.Private;
+    picture: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -696,7 +697,6 @@ export interface ApiWorkingPaperWorkingPaper
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     files: Schema.Attribute.Media<'files', true>;
-    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
