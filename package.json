@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^1.0.2",
+    "@sklinet/strapi-plugin-video-field": "^1.1.1",
     "@strapi/plugin-cloud": "5.4.1",
     "@strapi/plugin-users-permissions": "5.13.0",
     "@strapi/strapi": "5.13.0",
