@@ -420,14 +420,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     date_end: Schema.Attribute.Date;
     date_start: Schema.Attribute.Date;
     description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
+      Schema.Attribute.CustomField<'plugin::ckeditor.CKEditor'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
       Schema.Attribute.Private;
@@ -442,6 +435,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<'plugin::video-field.video'>;
   };
 }
 
@@ -547,14 +542,7 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
+      Schema.Attribute.CustomField<'plugin::ckeditor.CKEditor'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::new.new'> &
       Schema.Attribute.Private;
@@ -569,6 +557,8 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<'plugin::video-field.video'>;
   };
 }
 
