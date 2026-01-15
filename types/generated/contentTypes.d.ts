@@ -456,6 +456,39 @@ export interface ApiAreaArea extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCemsiCemsi extends Struct.SingleTypeSchema {
+  collectionName: 'cemsis';
+  info: {
+    displayName: 'CEMSI';
+    pluralName: 'cemsis';
+    singularName: 'cemsi';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NjQ4MDYzOTksImp0aSI6ImFmN2Q3NDU5LThkNWItNDNlOC1iMzE3LWE3NjI3YWQ3ZWI4ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkJPWCJdLCJ2YyI6IjU4ZmFmMTllIn0.ytvApNMnfjyA4y5eX4GKaWACNVpJTOASDXZLulMqN6hsfZgkweju2VzaYRmNOMbYWtFv6-kDpgaQ5marguQ2Ug';
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::cemsi.cemsi'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
@@ -1289,6 +1322,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::area.area': ApiAreaArea;
+      'api::cemsi.cemsi': ApiCemsiCemsi;
       'api::event.event': ApiEventEvent;
       'api::home-description.home-description': ApiHomeDescriptionHomeDescription;
       'api::new.new': ApiNewNew;
