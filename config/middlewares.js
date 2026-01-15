@@ -16,20 +16,42 @@ module.exports = [
         useDefaults: true,
         directives: {
           "default-src": ["'self'", "data:", "blob:"],
-          "script-src": ["'self'", "cdn.ckeditor.com"],
-          "connect-src": ["'self'", "cdn.ckeditor.com"],
-          "img-src": ["'self'", "data:", "blob:", "cdn.ckeditor.com"],
-          "style-src": ["'self'", "'unsafe-inline'", "cdn.ckeditor.com"],
-          "font-src": ["'self'", "cdn.ckeditor.com"],
+
+          // CKEditor CDN + event proxy (must include https://)
+          "script-src": [
+            "'self'",
+            "https://cdn.ckeditor.com",
+            "https://proxy-event.ckeditor.com",
+          ],
+
+          "connect-src": [
+            "'self'",
+            "https://proxy-event.ckeditor.com",
+            // Optional (usually not required, but harmless):
+            "https://cdn.ckeditor.com",
+          ],
+
+          "img-src": ["'self'", "data:", "blob:", "https://cdn.ckeditor.com"],
+          "style-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "https://cdn.ckeditor.com",
+          ],
+          "font-src": ["'self'", "https://cdn.ckeditor.com"],
+
+          // These also should include schemes to be safe
           "frame-src": [
             "'self'",
-            "youtube.com",
-            "www.youtube.com",
-            "vimeo.com",
-            "*.vimeo.com",
-            "facebook.com",
-            "www.facebook.com",
+            "https://youtube.com",
+            "https://www.youtube.com",
+            "https://vimeo.com",
+            "https://*.vimeo.com",
+            "https://facebook.com",
+            "https://www.facebook.com",
           ],
+
+          // Recommended by Strapi examples when customizing CSP
+          upgradeInsecureRequests: null,
         },
       },
     },
