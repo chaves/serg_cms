@@ -11,13 +11,18 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
     "content": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
         "output": "HTML",
         "preset": "defaultHtml"
-      }
+      },
+      "required": true
     }
   }
 }
