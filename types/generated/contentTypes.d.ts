@@ -687,10 +687,10 @@ export interface ApiPersonPerson extends Struct.CollectionTypeSchema {
         'Associate Researchers',
         'PhD Students',
         'Former Researchers',
-        'Postdoctoral researchers',
+        'Postdoctoral Researchers',
         'Visiting Academics',
         'Previous PhD Students',
-        'Professional staff',
+        'Professional Staff',
       ]
     > &
       Schema.Attribute.Required;
