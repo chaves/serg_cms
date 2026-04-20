@@ -14,9 +14,9 @@
     "@_sh/strapi-plugin-ckeditor": "^7.1.1",
     "ckeditor5": "~47.6.1",
     "@sklinet/strapi-plugin-video-field": "^1.1.1",
-    "@strapi/plugin-cloud": "5.42.0",
-    "@strapi/plugin-users-permissions": "5.42.0",
-    "@strapi/strapi": "5.42.0",
+    "@strapi/plugin-cloud": "5.42.1",
+    "@strapi/plugin-users-permissions": "5.42.1",
+    "@strapi/strapi": "5.42.1",
     "mysql2": "3.11.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -35,7 +35,12 @@
     "pnpm": ">=10.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@swc/core", "core-js-pure", "esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
   },
   "license": "MIT"
 }
