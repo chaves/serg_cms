@@ -14,6 +14,7 @@
   "attributes": {
     "category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "Director",
         "Research Team",
@@ -22,9 +23,9 @@
         "Former Researchers",
         "Postdoctoral researchers",
         "Visiting Academics",
-        "Previous PhD Students"
-      ],
-      "required": true
+        "Previous PhD Students",
+        "Professional staff"
+      ]
     },
     "picture": {
       "type": "media",
@@ -36,11 +37,11 @@
     },
     "bio": {
       "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
       "options": {
         "output": "HTML",
         "preset": "defaultHtml"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+      }
     },
     "first_name": {
       "type": "string",
