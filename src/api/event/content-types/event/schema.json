@@ -43,7 +43,7 @@
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 50
+      "maxLength": 255
     },
     "attached_files": {
       "type": "media",

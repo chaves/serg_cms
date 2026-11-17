@@ -53,7 +53,7 @@
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 50
+      "maxLength": 255
     },
     "video": {
       "type": "customField",

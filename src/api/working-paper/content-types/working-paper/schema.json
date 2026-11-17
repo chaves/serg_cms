@@ -46,7 +46,8 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "maxLength": 50
+      "required": true,
+      "maxLength": 255
     },
     "picture": {
       "type": "media",
